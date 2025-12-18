@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/DxProject" docBase="DxProject" debug="0"
+	reloadable="true" crossContext="true">
+
+	<Resource name="jdbc/MyDB"
+		auth="Container"
+		type="javax.sql.DataSource"
+		username="dot1vpadmin"
+		password="PORTArforindian98"
+		driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@103.115.194.206:1521:erpdemo"
+		initialSize="10"
+		maxActive="100"
+		maxTotal="50"	     
+		minIdle="10"
+		maxIdle="40"
+		maxWaitMillis="10000"
+		maxWait="30000"
+		minEvictableIdleTimeMillis="60000"
+		timeBetweenEvictionRunsMillis="34000"
+		suspectTimeout="60"
+        validationQuery="select 1 from dual"
+        validationInterval="34000"
+        testOnBorrow="true"
+		testWhileIdle="true"
+		removeAbandoned="true"
+		removeAbandonedOnBorrow="true"
+        removeAbandonedOnMaintenance="true"
+        removeAbandonedTimeout="55"
+		logAbandoned="false"
+		jmxEnabled="true"
+		abandonWhenPercentageFull="0"
+        
+		jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;
+	     org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+	     org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx(threshold=10000)"/>
+<!--
+	<Resource name="jdbc/MyDB" 
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.driver.OracleDriver" 
+		maxActive="9"
+		maxIdle="7" 
+		minIdle="2" 
+		maxWait="30000" 
+		initialSize="5"
+		
+			url="jdbc:oracle:thin:@103.115.194.223:1521:K12BY4C"
+		username="dot1vpadmin"
+		password="PORTArforindian98" 
+		removeAbandonedTimeout="15"
+		removeAbandoned="true" 
+		timeBetweenEvictionRunsMillis="30"
+		minEvictableIdleTimeMillis="60" />
+	-->	
+</Context>
